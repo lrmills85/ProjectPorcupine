@@ -2,6 +2,7 @@
 
 [RequireComponent(typeof(MeshFilter))]
 [RequireComponent(typeof(MeshRenderer))]
+[ExecuteInEditMode]
 public class HoverHex : MonoBehaviour
 {
     public Vector2 hexPosition;
