@@ -21,7 +21,6 @@ public class HoverHex : MonoBehaviour
 
         //populate hex arrays
         DrawTopAndBottom();
-        DrawSides();
         SetTriangles();
 
         //setup mesh
@@ -122,46 +121,5 @@ public class HoverHex : MonoBehaviour
         //topleft
         _vertices[23] = new Vector3(-World.HexHalfWidth, -1, -World.HexRadius / 2);
         _uv[23] = new Vector2(0, 0.75f);
-    }
-
-    void DrawSides()
-    {
-        //top
-        _vertices[6] = new Vector3(0, 0, -World.HexRadius);
-        _uv[6] = new Vector2(0.5f, 1);
-        //topright
-        _vertices[7] = new Vector3(World.HexHalfWidth, 0, -World.HexRadius / 2);
-        _uv[7] = new Vector2(1, 0.75f);
-        //bottomright
-        _vertices[8] = new Vector3(World.HexHalfWidth, 0, World.HexRadius / 2);
-        _uv[8] = new Vector2(1, 0.25f);
-        //bottom
-        _vertices[9] = new Vector3(0, 0, World.HexRadius);
-        _uv[9] = new Vector2(0.5f, 0);
-        //bottomleft
-        _vertices[10] = new Vector3(-World.HexHalfWidth, 0, World.HexRadius / 2);
-        _uv[10] = new Vector2(0, 0.25f);
-        //topleft
-        _vertices[11] = new Vector3(-World.HexHalfWidth, 0, -World.HexRadius / 2);
-        _uv[11] = new Vector2(0, 0.75f);
-
-        //top
-        _vertices[12] = new Vector3(0, -1, -World.HexRadius);
-        _uv[12] = new Vector2(0, 0.75f);
-        //topright
-        _vertices[13] = new Vector3(World.HexHalfWidth, -1, -World.HexRadius / 2);
-        _uv[13] = new Vector2(0.5f, 1);
-        //bottomright
-        _vertices[14] = new Vector3(World.HexHalfWidth, -1, World.HexRadius / 2);
-        _uv[14] = new Vector2(1, 0.75f);
-        //bottom
-        _vertices[15] = new Vector3(0, -1, World.HexRadius);
-        _uv[15] = new Vector2(1, 0.25f);
-        //bottomleft
-        _vertices[16] = new Vector3(-World.HexHalfWidth, -1, World.HexRadius / 2);
-        _uv[16] = new Vector2(0.5f, 0);
-        //topleft
-        _vertices[17] = new Vector3(-World.HexHalfWidth, -1, -World.HexRadius / 2);
-        _uv[17] = new Vector2(0, 0.25f);
     }
 }

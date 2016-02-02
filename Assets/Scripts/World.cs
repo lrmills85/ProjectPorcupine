@@ -24,7 +24,7 @@ public class World : MonoBehaviour
 
     #endregion
 
-    public enum GameMode { Normal, Building }
+    public enum GameMode { Normal, Placement }
     public static GameMode gameMode = GameMode.Normal;
 
     public Vector2 mapSize;
@@ -50,17 +50,6 @@ public class World : MonoBehaviour
                 hoveredHex.transform.position = hoveredHexActualPos;
             }
         }
-
-        //    hoveredHexPos = ToHex(hit.point);
-        //    hoveredHexPixel = ToPixel(hoveredHexPos);
-        //    //Debug.Log(hoveredHexPixel);
-        //    //aDebug.Log(hoveredHexPos);
-
-        //    GameObject go = hit.collider.gameObject;
-
-        //    if (go.layer == 8)
-        //        HoverHex(go.GetComponent<HexModel>());
-        //}
     }
 
     void Start()
@@ -177,5 +166,10 @@ public class World : MonoBehaviour
         }
 
         return new Vector3(resultX, resultY);
+    }
+
+    public Vector3 GetHoveredHexActualPos()
+    {
+        return hoveredHexActualPos;
     }
 }
